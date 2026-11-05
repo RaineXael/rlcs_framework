@@ -32,7 +32,7 @@ public class ShaderRect : GameObject
 
         base.Draw();
         Raylib.BeginShaderMode(shader);
-            Raylib.DrawRectangle((int)GlobalPosition.X, (int)GlobalPosition.Y, width, height,Color.White);
+            Raylib.DrawRectangle((int)GlobalPosition.X, (int)GlobalPosition.Y, width, height,Color.Magenta);
         Raylib.EndShaderMode();
     }
 }
