@@ -5,6 +5,7 @@ namespace Framework;
 
 public static class AssetManager
 {
+    
     private const string baseDir = "resources/";
     private static Dictionary<string, Texture2D> _textures = new Dictionary<string, Texture2D>();
     public static Texture2D fallbackTexture;
@@ -76,5 +77,11 @@ public static class AssetManager
     public static void InitializeFallbacks()
     {
         fallbackTexture = Raylib.LoadTexture("./resources/spr_default.png");
+    }
+
+    public static Shader LoadFragShader(string path)
+    {
+        return Raylib.LoadShader("0",baseDir+path);
+        //don't forget btw: UnloadShader(shader);
     }
 }
